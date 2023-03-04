@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Login Form</title>
+  <head>
+    <title>Login Form</title>
     <style>
-    body {
+      body {
         font-family: Arial, sans-serif;
         background-color: #ebebeb;
-    }
-    
-    .container {
+      }
+
+      .container {
         margin: auto;
         margin-top: 50px;
         background-color: #ffffff;
@@ -16,27 +16,29 @@
         box-shadow: 0px 0px 10px #888;
         width: 400px;
         border-radius: 20px;
-    }
-    
-    h2 {
+      }
+
+      h2 {
         margin-top: 0;
-    }
-    
-    label {
+      }
+
+      label {
         display: block;
         margin-bottom: 10px;
-    }
-    
-    input[type=text], input[type=password] {
+      }
+
+      input[type="text"],
+      input[type="password"] {
         padding: 10px;
         border-radius: 5px;
         border: none;
         background-color: #f2f2f2;
-        width: 100%;
+        width: 96%;
         margin-bottom: 20px;
-    }
-    
-    button[type=submit] {
+        
+      }
+
+      button[type="submit"] {
         background-color: #ff725e;
         color: #fff;
         border: none;
@@ -47,92 +49,94 @@
         margin-top: 5px;
         margin-left: 25%;
         margin-bottom: 20px;
-    }
-    
-    button[type=submit]:hover {
-        background-color: #693832
-    }
-    a {
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="username"]:focus {
+        border: 2px solid #ff725e;
+        outline: none;
+      }
+      button[type="submit"]:hover {
+        background-color: #693832;
+      }
+      a {
         color: #ff725e;
-    }
-    .form-main-text{
+      }
+      .form-main-text {
         text-align: center;
         color: #ff725e;
         font-weight: 1000;
         font-size: 30px;
-    }
-    .form-name{
+      }
+      .form-name {
         font-family: system-ui;
         font-weight: 600;
-    }
-    .hello
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.divider
-{
-    margin: 0 10px;
-    height: 2px;
-    width: 100%;
-    background-color: gray;
-}
-.button{
-    background-color:#ebebeb; 
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-family: system-ui;
-    font-weight: 200;
-    font-size: 18px;
-}
-.login-button{
-    font-family: system-ui;
-    font-weight: 600;
-    font-size: 18px;
-    padding: -16px;
-}
+      }
+      .hello {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .divider {
+        margin: 0 10px;
+        height: 2px;
+        width: 100%;
+        background-color: #ff725e;
+      }
+      .button {
+        background-color: #ebebeb;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-family: system-ui;
+        font-weight: 200;
+        font-size: 18px;
+      }
+      .login-button {
+        font-family: system-ui;
+        font-weight: 600;
+        font-size: 18px;
+        padding: -16px;
+      }
 
-#g{
-    font-family: system-ui;
-    font-weight: 500;
-    font-size: 20px;
-    color:#ff725e;
-
-}
-.google-text{
-    padding-top: 8px;
-    padding-bottom: 10px;
-    font-family: system-ui;
-    font-weight: 300;
-    font-size: 18px;
-}
+      #g {
+        font-family: system-ui;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ff725e;
+      }
+      .google-text {
+        padding-top: 8px;
+        padding-bottom: 10px;
+        font-family: system-ui;
+        font-weight: 300;
+        font-size: 18px;
+      }
     </style>
-</head>
-<body>
-	<div class="container">
-		<form action="#">
-            
-			<h2 class="form-main-text">Login</h2>
-            <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span>Login with Google Account</div></button>
-            <div class="hello">
-                <div class="divider"></div>
-                <p>Or</p>
-                <div class="divider"></div>
-            </div>
-			<label for="username" class="form-name">Username</label>
-			<input type="text" id="username" name="username">
-			<label for="password" class="form-name">Password</label>
-			<input type="password" id="password" name="password">
-            
-            
-			<button type="submit"><h1 class="login-button">Login</h1></button>
-			<p>Don't have an account? <a href="./signup.html">Sign up</a></p>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <h2 class="form-main-text">Login</h2>
+        <button class="button" onclick="window.open('https://google.com')">
+          <div class="google-text">
+            <span id="g">G &nbsp;</span>Login with Google Account
+          </div>
+        </button>
+        <div class="hello">
+          <div class="divider"></div>
+          <p>Or</p>
+          <div class="divider"></div>
         </div>
-		</form>
-	</div>
-</body>
+        <label for="username" class="form-name">Username</label>
+        <input type="text" id="username" name="username" />
+        <label for="password" class="form-name">Password</label>
+        <input type="password" id="password" name="password" />
+        <button type="submit"><h1 class="login-button">Login</h1></button>
+        <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
+      </form>
+    </div>
+  </body>
 </html>
