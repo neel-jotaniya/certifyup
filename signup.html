@@ -50,7 +50,7 @@
         background-color: #ff725e;
         color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
         cursor: pointer;
         width: 50%;
         align-content: center;
@@ -59,10 +59,12 @@
         margin-bottom: 20px;
     }
     
-    button[type=submit]:hover {
+    button[type=submit]:hover{
         background-color: #693832
     }
-    
+    .a:hover {
+        color: #693832;
+      }
     a {
         color: #ff725e;
     }
@@ -115,13 +117,16 @@
     color: #ff725e;
 
 }
-.google-text{
-    padding-top: 8px;
-    padding-bottom: 10px;
-    font-family: system-ui;
-    font-weight: 300;
-    font-size: 18px;
-}
+.google-text {
+        margin-top: 7px;
+        margin-bottom: 10px;
+      }
+      .google-text-main {
+        font-family: system-ui;
+        font-weight: 300;
+        font-size: 18px;
+        padding-bottom: -10px;
+      }
 #name{
     padding: 10px;
         border-radius: 5px;
@@ -149,7 +154,7 @@
 	<div class="container">
 		<form action="#">
 			<h2 class="form-main-text">Sign Up</h2>
-            <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span>Sign up with Google Account</div></button>
+            <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span><span class="google-text-main">Sign up with Google Account</span></div></button>
             <div class="hello">
                 <div class="divider"></div>
                 <p>Or</p>

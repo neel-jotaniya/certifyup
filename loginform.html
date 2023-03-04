@@ -7,9 +7,9 @@
         font-family: Arial, sans-serif;
         background-color: #ebebeb;
       }
-      p{
+      p {
         text-align: center;
-    }
+      }
       .container {
         margin: auto;
         margin-top: 50px;
@@ -37,14 +37,13 @@
         background-color: #f2f2f2;
         width: 96%;
         margin-bottom: 20px;
-        
       }
 
       button[type="submit"] {
         background-color: #ff725e;
         color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
         cursor: pointer;
         width: 50%;
         align-content: center;
@@ -61,6 +60,10 @@
       button[type="submit"]:hover {
         background-color: #693832;
       }
+      .a:hover {
+        color: #693832;
+      }
+
       a {
         color: #ff725e;
       }
@@ -107,14 +110,18 @@
         font-family: system-ui;
         font-weight: 500;
         font-size: 20px;
+        padding-top: 10px;
         color: #ff725e;
       }
       .google-text {
-        padding-top: 8px;
-        padding-bottom: 10px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+      }
+      .google-text-main {
         font-family: system-ui;
         font-weight: 300;
         font-size: 18px;
+        padding-bottom: -10px;
       }
     </style>
   </head>
@@ -124,7 +131,8 @@
         <h2 class="form-main-text">Login</h2>
         <button class="button" onclick="window.open('https://google.com')">
           <div class="google-text">
-            <span id="g">G &nbsp;</span>Login with Google Account
+            <span id="g">G &nbsp;</span
+            ><span class="google-text-main">Login with Google Account</span>
           </div>
         </button>
         <div class="hello">
