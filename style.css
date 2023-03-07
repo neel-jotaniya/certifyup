@@ -55,6 +55,8 @@
   }
 .primary-button:hover{
     background-color: #693832;
+    transform: scale(1.05);
+    transition: .2s;
 }
 .first-section{
     padding-left: 25px;
