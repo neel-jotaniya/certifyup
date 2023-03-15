@@ -1,29 +1,31 @@
 .logo-image{
-        max-width: 32px;
-        max-height: 32px;
-        padding-bottom: -100px;
-        padding-top: 20px;
-    }
-.logo-text{
-        text-align: left;
-        font-size: 22px;
-        padding-left: 50px;
-        margin-top: -35px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 700;
-    }
-.main-text{
-        font-size: 70px;
-        word-spacing: -8px;
-        width: 40%;
-        height: 100px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 1000;
-        line-height: 70px;
-        margin-top: -500px;
-}
-.sub-text{
-    
+    max-width: 32px;
+    max-height: 32px;
+    padding-bottom: -100px;
+    padding-top: 20px;
+  }
+  
+  .logo-text{
+    text-align: left;
+    font-size: 22px;
+    padding-left: 50px;
+    margin-top: -35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+  }
+  
+  .main-text{
+    font-size: 70px;
+    word-spacing: -8px;
+    width: 40%;
+    height: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 1000;
+    line-height: 70px;
+    margin-top: -500px;
+  }
+  
+  .sub-text{
     width: 40%;
     height: 250px;
     color: #6b7380;
@@ -32,15 +34,15 @@
     margin-top: 5%;
     font-size: 20px;
     margin-bottom: -125px;
-    
-}
-
-.main-image{
+  }
+  
+  .main-image{
     width: 40%;
     size: 20%;
     margin-left: 50%;
-}
-.primary-button{
+  }
+  
+  .primary-button{
     background-color: #ff725e; /* Green */
     border: none;
     color: white;
@@ -51,21 +53,25 @@
     display: inline-block;
     font-size: 16px;
     margin-top: -5px;
-    
-  }
-.primary-button:hover{
-    background-color: #693832;
-    transform: scale(1.05);
     transition: .2s;
-}
-.first-section{
+  }
+  
+  .primary-button:hover{
+    background-color: #693832;
+    transform: scale(1.02);
+    transition: .2s;
+  }
+  
+  .first-section{
     padding-left: 25px;
-}
-.second-section{
+  }
+  
+  .second-section{
     padding-left: 25px;
     margin-top: 150px;
-}
-.medium-text{
+  }
+  
+  .medium-text{
     font-size: 50px;
     word-spacing: -8px;
     width: 40%;
@@ -75,14 +81,15 @@
     line-height: 60px;
     margin-top: -500px;
     margin-left: 60%;
-}
-.second-image{
+  }
+  
+  .second-image{
     width: 40%;
     size: 20%;
     margin-right: 60%;
-}
-
-.medium-sub-text{
+  }
+  
+  .medium-sub-text{
     margin-left: 60%;
     width: 40%;
     height: 250px;
@@ -91,7 +98,7 @@
     font-weight: 200;
     margin-top: -10px;
     font-size: 20px;
-}
+  }
 .hello
 {
     display: flex;
