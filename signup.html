@@ -158,10 +158,44 @@
     margin-bottom: -10px;
 }
     </style>
+    <script>
+        // Get form element
+      function check() {
+        
+    var reFullName = /^[a-zA-Z\s]+$/;
+    var reUsername = /^[a-zA-Z0-9_]+$/;
+    var reEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var rePassword = /^\w{4,8}$/;
+    var errorMsg = "";
+
+    if (!reFullName.test(frm.name.value)) {
+        errorMsg += "Invalid full name\n";
+    }
+
+    if (!reUsername.test(frm.username.value)) {
+        errorMsg += "Invalid username\n";
+    }
+
+    if (!reEmail.test(frm.email.value)) {
+        errorMsg += "Invalid email address\n";
+    }
+
+    if (!rePassword.test(frm.password.value)) {
+        errorMsg += "Invalid password\n";
+    }
+
+    if (errorMsg != "") {
+        alert(errorMsg);
+        return false;
+    }
+
+    return true;
+}
+    </script>
 </head>
 <body>
 	<div class="container">
-		<form action="#">
+		<form action="/home-page.html" name="frm">
 			<h2 class="form-main-text">Sign Up</h2>
             <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span><span class="google-text-main">Sign up with Google Account</span></div></button>
             <div class="hello">
@@ -182,7 +216,7 @@
 			<input type="text" id="email" name="email">
 			<label for="password" class="form-name">Password</label>
 			<input type="password" id="password" name="password">
-			<button type="submit" class="loging-button"><h1 class="login-button">Create Account</h1></button>
+			<button type="submit" class="loging-button" onclick="return check();"><h1 class="login-button">Create Account</h1></button>
 			<p class="last-text">Already have an account? <a href="./loginform.html">Login</a></p>
         </div>
 		</form>

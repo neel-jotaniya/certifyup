@@ -129,10 +129,38 @@
         padding-bottom: -10px;
       }
     </style>
+    <script>
+function check() {
+        
+        
+        var reUsername = /^[a-zA-Z0-9_]+$/;
+        
+        var rePassword = /^\w{4,8}$/;
+        var errorMsg = "";
+    
+        
+        if (!reUsername.test(frm.username.value)) {
+            errorMsg += "Invalid username\n";
+        }
+    
+       
+        if (!rePassword.test(frm.password.value)) {
+            errorMsg += "Invalid password\n";
+        }
+    
+        if (errorMsg != "") {
+            alert(errorMsg);
+            return false;
+        }
+    
+        return true;
+    }
+
+    </script>
   </head>
   <body>
     <div class="container">
-      <form action="/home-page.html">
+      <form action="/home-page.html" name="frm">
         <h2 class="form-main-text">Login</h2>
         <button class="button" onclick="window.open('https://google.com')">
           <div class="google-text">
@@ -146,10 +174,10 @@
           <div class="divider"></div>
         </div>
         <label for="username" class="form-name">Username</label>
-        <input type="text" id="username" name="username" placeholder="Username"/>
+        <input type="text" id="username" name="username" />
         <label for="password" class="form-name">Password</label>
         <input type="password" id="password" name="password" />
-        <button type="submit"><h1 class="login-button">Login</h1></button>
+        <button type="submit" onclick="return check();"><h1 class="login-button">Login</h1></button>
         <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
       </form>
     </div>
