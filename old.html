@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hero {
+        width: 100%;
+        margin-top: -1%;
+      }
+
+      .logo-image {
+        max-width: 40px;
+        max-height: 40px;
+        padding-left: 20px;
+      }
+      .logo-section {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: -20px;
+      }
+      nav ul li a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      nav ul li a:hover {
+        color: #ff725e;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+
+      .certificate-templates {
+        margin: 10px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .template-card {
+        width: 350px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0px 0px 10px #888;
+        transition: 0.2s;
+        border-radius: 10px;
+      }
+      .template-card img {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      .Certificate-name {
+        font-size: 15px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      .template-card:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+        box-shadow: 0px 0px 20px #888;
+      }
+
+      .hello {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+      }
+      .divider {
+        
+        height: 2px;
+        width: 100%;
+        margin-right: 1%;
+        margin-left: 1%;
+        background-color: #ff725e;
+      }
+      .Certificate-heading {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+ 
+    <main>
+      <div class="hello">
+        <div class="divider"></div>
+        <p class="Certificate-heading">Select a Template</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="certificate-templates">
+        <div class="template-card">
+          <img
+            src="/images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
+            alt="Certificate Template 1"
+          />
+          <h3 class="Certificate-name">Certificate Template 1</h3>
+        </div>
+        <div class="template-card">
+          <img
+            src="/images/Modern Elegant Certificate of Appreciation.png"
+            alt="Certificate Template 2"
+          />
+          <h3 class="Certificate-name">Certificate Template 1</h3>
+        </div>
+        <div class="template-card">
+          <img
+            src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
+            alt="Certificate Template 3"
+          />
+          <h3 class="Certificate-name">Certificate Template 1</h3>
+        </div>
+        <div class="template-card">
+          <img
+            src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
+            alt="Certificate Template 3"
+          />
+          <h3 class="Certificate-name">Certificate Template 1</h3>
+        </div>
+        <div class="template-card">
+          <img
+            src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
+            alt="Certificate Template 3"
+          />
+          <h3 class="Certificate-name">Certificate Template 1</h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

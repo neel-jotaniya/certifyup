@@ -35,14 +35,63 @@
                 100% {color:red; left:0px; top:0px;}
 
             }*/
+            .hero {
+        width: 100%;
+        margin-top: -1%;
+      }
+
+      .logo-image {
+        max-width: 40px;
+        max-height: 40px;
+        padding-left: 20px;
+      }
+      .logo-section {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: -20px;
+      }
+      nav ul li a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      nav ul li a:hover {
+        color: #ff725e;
+        transition: 0.25s;
+        cursor: pointer;
+      }
 
         </style>
         <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </nav>
+            <div class="hero">
+                <nav>
+                  <h2 class="logo-section">
+                    <img class="logo-image" src="/images/logo.svg" sizes="10px" />
+                  </h2>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/templates.html">Templates</a></li>
+                    <li><a href="#">Clubs</a></li>
+                    <li><a href="#">Verify</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contec Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                  </ul>
+                </nav>
+              </div>
     </header>
         <h1>Welcome!!!</h1>
        <pre> <h3>Certificate 

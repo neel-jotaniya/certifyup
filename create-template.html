@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
+
+    
+
+
+    <style>
+      .hero {
+        width: 100%;
+        margin-top: -1%;
+      }
+
+      .logo-image {
+        max-width: 40px;
+        max-height: 40px;
+        padding-left: 20px;
+      }
+      .logo-section {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+      }
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: -20px;
+      }
+      nav ul li a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+      }
+      nav ul li a:hover {
+        color: #ff725e;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .certificate-image {
+        max-width: 100%;
+        height: auto;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Style the form fields */
+      .form-field {
+        margin-bottom: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+
+    </script>
+    <div class="hero">
+      <nav>
+        <h2 class="logo-section">
+          <img class="logo-image" src="/images/logo.svg" sizes="10px" />
+        </h2>
+        <ul>
+          <li><a href="/homepage.html">Home</a></li>
+          <li><a href="/templates.html">Templates</a></li>
+          <li><a href="#">Clubs</a></li>
+          <li><a href="#">Verify</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contec Us</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+      <div class="grid-container">
+        <div class="certificate-container">
+          <canvas id="pdfCanvas"></canvas>
+          <script>
+            const pdfUrl = 'Red_Modern_Appreciation_Certificate.pdf';
+      
+            const canvas = document.getElementById('pdfCanvas');
+            const context = canvas.getContext('2d');
+      
+            pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+              pdf.getPage(1).then(page => {
+                const viewport = page.getViewport({ scale: 1 });
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+      
+                const renderContext = {
+                  canvasContext: context,
+                  viewport: viewport,
+                };
+      
+                page.render(renderContext);
+              });
+            });
+      
+            function insertWord() {
+  const word = document.getElementById('name').value;
+  const canvas = document.getElementById('pdfCanvas');
+  const context = canvas.getContext('2d');
+  
+  context.font = '30px Arial';
+  context.fillText(word, 100, 100);
+
+  // re-render the page with the updated canvas
+  const pdfUrl = 'Red_Modern_Appreciation_Certificate.pdf';
+  pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      const viewport = page.getViewport({ scale: 1 });
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      const renderContext = {
+        canvasContext: context,
+        viewport: viewport,
+      };
+
+      page.render(renderContext);
+    });
+  });
+}
+
+
+        </script>
+      
+          </div>
+      
+        <div class="form-container">
+          <h2>Form Title</h2>
+          <form id = 'form-id'>
+            <div class="form-field">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+            </div>
+            
+            <button type="submit" onclick="insertWord()">Submit</button>
+          </form>
+        </div>
+      </div>
+      <button onclick="downloadPdf()">Download Updated PDF</button>
+
+<script>
+function downloadPdf() {
+  const canvas = document.getElementById('pdfCanvas');
+  const pdfUrl = 'Red_Modern_Appreciation_Certificate.pdf';
+  pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      const viewport = page.getViewport({ scale: 1 });
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      const renderContext = {
+        canvasContext: canvas.getContext('2d'),
+        viewport: viewport,
+      };
+
+      page.render(renderContext).promise.then(() => {
+        const pdfData = canvas.toDataURL('application/pdf');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfData;
+        downloadLink.download = 'updated_certificate.pdf';
+        downloadLink.click();
+
+        // Add the following lines to create a downloadable link for the PDF
+        const link = document.createElement('a');
+        link.href = pdfData;
+        link.target = '_blank';
+        link.download = 'updated_certificate.pdf';
+        document.body.appendChild(link);
+        link.click();
+      });
+    });
+  });
+}
+
+</script>
+
+
+
+  </body>
+</html>
