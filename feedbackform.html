@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ebebeb;
+    }
+    p{
+        text-align: center;
+    }
+    .container {
+        margin: auto;
+        margin-top: 10px;
+        background-color: #ffffff;
+        padding: 30px;
+        box-shadow: 0px 0px 10px #888;
+        width: 400px;
+        border-radius: 20px;
+    }
+    
+    h2 {
+        margin-top: 0;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type=text], input[type=password]{
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="username"]:focus, #name:focus,#username:focus{
+        
+    
+         border: 2px solid #ff725e;
+        outline: none;
+        
+    }
+    button[type=submit] {
+        background-color: #ff725e;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 50%;
+        align-content: center;
+        margin-top: 5px;
+        margin-left: 25%;
+        margin-bottom: 10px;
+        transition: .2s;
+    }
+    
+    button[type=submit]:hover{
+        background-color: #693832;
+        transform: scale(1.02);
+        transition: .2s;
+    }
+    .a:hover {
+        color: #693832;
+      }
+    a {
+        color: #ff725e;
+        text-decoration: none;
+        
+    }
+    .form-main-text{
+        text-align: center;
+        color: #ff725e;
+        font-weight: 1000;
+        font-size: 30px;
+        margin-top: -20px;
+    }
+    .form-name{
+        font-family: system-ui;
+        font-weight: 600;
+    }
+    .hello
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider
+{
+    margin: 0 10px;
+    height: 2px;
+    width: 100%;
+    background-color:#ff725e;
+}
+.button{
+    background-color:#ebebeb; 
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: system-ui;
+    font-weight: 200;
+    font-size: 18px;
+
+    
+}
+.login-button{
+    font-family: system-ui;
+    font-weight: 600;
+    font-size: 18px;
+    padding: -16px;
+}
+#g{
+    font-family: system-ui;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff725e;
+
+}
+.google-text {
+        margin-top: 7px;
+        margin-bottom: 10px;
+      }
+      .google-text-main {
+        font-family: system-ui;
+        font-weight: 300;
+        font-size: 18px;
+        padding-bottom: -10px;
+      }
+#name{
+    padding: 10px;
+        border-radius: 5px;
+        
+        border: none;
+        background-color: #f2f2f2;
+        width: 42%;
+        margin-bottom: 20px;
+}
+#username{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    width: 90%;
+    margin-bottom: 20px;
+    }
+.user-name-section{
+    margin-left: 53%;
+    margin-top: -86px;
+}
+.last-text{
+    margin-bottom: -10px;
+}
+    </style>
+
+
+</head>
+<body>
+	<div class="container">
+		<form action="./php/feedback.php" method="post" name="frm">
+			<h2 class="form-main-text">Feedback Form</h2>
+            
+            <div class="full-name-section">
+                <label for="name" class="form-name">Full name</label>
+			    <input type="text" id="name" name="name">
+
+            <div class="user-name-section">
+                <label for="email" class="form-name">Email Address</label>
+			<input type="text" id="email" name="email">
+            </div>
+            </div>
+            <label for="suggestion" class="form-name">Do you have any suggestion</label>
+			<textarea id="suggestion" name="suggestion" style="width: 409px; height: 42px;"></textarea>
+			
+			<button type="submit" class="loging-button" ><h1 class="login-button">Submit</h1></button>
+			
+        </div>
+		</form>
+	</div>
+</body>
+</html>
