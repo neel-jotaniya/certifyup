@@ -1,46 +1,23 @@
-<html>
-   <head><title>Home Page</title></head>
-    <body>
-        <style>
-            body{
-                background: url("images/background.png");
-            }
-            header nav ul li a {
-                  color: #fff;
-                 text-decoration: none;
-            }
-            h1{
-                color:aliceblue;
-                text-align: center;
-                margin-top: 50px;
-                text-shadow: 2px 2px 5px blue;
-            }
-            header{
-                background: url("ground.jpg");
-                box-sizing: 200px;
-            }
-            h3{
-                margin-top: 100px;
-                font-size: 50;
-                color:blanchedalmond;
-                text-align: center;}
-            .hero {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     
+      .hero2 {
         width: 100%;
         margin-top: -1%;
       }
 
-      
-      .hero {
-        width: 100%;
-        margin-top: -1%;
-      }
-
-      .logo-image {
+      .logo-image2 {
         max-width: 40px;
         max-height: 40px;
         padding-left: 20px;
       }
-      .logo-section {
+      .logo-section2 {
         display: flex;
         justify-content: space-between;
         padding-right: 10%;
@@ -69,77 +46,204 @@
         transition: 0.25s;
         cursor: pointer;
       }
+      .logo-image{
+    max-width: 32px;
+    max-height: 32px;
+    padding-bottom: -100px;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  
+  .logo-text{
+    text-align: left;
+    font-size: 22px;
+    padding-left: 50px;
+    margin-top: -35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+  }
+  
+  .main-text{
+    font-size: 70px;
+    word-spacing: -8px;
+    width: 40%;
+    height: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 1000;
+    line-height: 70px;
+    margin-top: -500px;
+    padding-left: 20px;
+  }
+  
+  .sub-text{
+    width: 40%;
+    height: 250px;
+    color: #6b7380;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    margin-top: 5%;
+    font-size: 20px;
+    margin-bottom: -125px;
+    padding-left: 20px;
+  }
+  
+  .main-image{
+    width: 40%;
+    size: 20%;
+    margin-left: 50%;
+  }
+  
+  .primary-button{
+    background-color: #ff725e; /* Green */
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: -5px;
+    transition: .2s;
+    margin-left: 20px;
+    
+  }
+  
+  .primary-button:hover{
+    background-color: #693832;
+    transform: scale(1.02);
+    transition: .2s;
+  }
+  
+  .first-section{
+    padding-left: 25px;
+  }
+  
+  .second-section{
+    padding-left: 25px;
+    margin-top: 150px;
+  }
+  
+  .medium-text{
+    font-size: 50px;
+    word-spacing: -8px;
+    width: 40%;
+    height: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 1000;
+    line-height: 60px;
+    margin-top: -500px;
+    margin-left: 60%;
+  }
+  
+  .second-image{
+    width: 40%;
+    size: 20%;
+    margin-right: 60%;
+  }
+  
+  .medium-sub-text{
+    margin-left: 60%;
+    width: 40%;
+    height: 250px;
+    color: #6b7380;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    margin-top: -10px;
+    font-size: 20px;
+  }
+.hello
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider
+{
+    margin: 0 10px;
+    height: 2px;
+    width: 100%;
+    background-color: gray;
+}
+.main-form{
+    align-content: center;
+    
+}
+.hero2 {
+  width: 100%;
+  margin-top: -1%;
+}
 
-      .certificate-templates {
-        margin: 10px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .template-card {
-        width: 350px;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        box-shadow: 0px 0px 10px #888;
-        transition: 0.2s;
-        border-radius: 10px;
-      }
-      .template-card img {
-        max-width: 100%;
-        margin-bottom: 10px;
-      }
-      .Certificate-name {
-        font-size: 15px;
-        font-family: "Josefin Sans", sans-serif;
-      }
 
-      .template-card:hover {
-        transform: scale(1.05);
-        transition: 0.2s;
-        box-shadow: 0px 0px 20px #888;
-      }
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: -20px;
+}
+nav ul li a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+}
+nav ul li a:hover {
+  color: #ff725e;
+  transition: 0.25s;
+  cursor: pointer;
+}
 
-      .hello {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 20px;
-      }
-      .divider {
-        
-        height: 2px;
-        width: 100%;
-        margin-right: 1%;
-        margin-left: 1%;
-        background-color: #ff725e;
-      }
-      .Certificate-heading {
-        font-size: 20px;
-      }
     </style>
+    
   </head>
   <body>
-    <div class="hero">
+    <div class="hero2">
       <nav>
-        <h2 class="logo-section">
-          <img class="logo-image" src="images/logo.svg" sizes="10px" />
+        <h2 class="logo-section2">
+          <img class="logo-image2" src="/Certifyup/images/logo.svg" sizes="10px" />
         </h2>
         <ul>
-          <li><a href="homepage.html">Home</a></li>
-          <li><a href="templates.html">Templates</a></li>
+          <li><a href="/Certifyup/homepage.html">Home</a></li> 
+          <li><a href="/Certifyup/templates.html">Templates</a></li>
           <li><a href="#">Clubs</a></li>
-          <li><a href="#">Verify</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contec Us</a></li>
-          <li><a href="feedbackform.html">Feedback</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="/Certifyup/feedbackform.html">Feedback</a></li>
         </ul>
       </nav>
     </div>
-    </header>
-        <h1>Welcome!!!</h1>
-       <pre> <h3>Certificate 
-                   Generator</h3></pre>
-    </body>
+    <!-- <div class="first-section">
+      <div class="logo-section">
+        <img
+          class="logo-image"
+          src="images/logo.svg"
+          alt="Certify logo"
+        />
+        <p class="logo-text">CertifyUp</p>
+      </div> -->
+      <div class="main-text-division">
+        <img class="main-image" src="images/landing-page-image.svg" alt="Certify" />
+        <div class="main-text-devision">
+          <p class="main-text">Get Certified Instantly with CertifyUp</p>
+          <span class="text-primary">.</span>
+        </div>
 
+        <h2 class="sub-text">
+          Empowering organizations to create verified certificates for their
+          students.
+        </h2>
+      </div>
+      <div class="button">
+        <a class="primary-button" href="/Certifyup/templates.html" disabled="false"
+          >Create Now</a
+        >
+      </div>
+    </div>
+  </body>
 </html>

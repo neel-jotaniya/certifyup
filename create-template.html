@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://allfont.net/allfont.css?fonts=courier-bold" rel="stylesheet" type="text/css" />
+    <link
+      href="https://allfont.net/allfont.css?fonts=courier-bold"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,22 +14,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/pdfjs@2.4.7/font/Courier-Bold.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
-
-
-
-
     <style>
       .hero {
         width: 100%;
         margin-top: -1%;
       }
 
-      .logo-image {
+      .logo-image2 {
         max-width: 40px;
         max-height: 40px;
         padding-left: 20px;
       }
-      .logo-section {
+      .logo-section2 {
         display: flex;
         justify-content: space-between;
         padding-right: 10%;
@@ -143,57 +143,132 @@
   <body>
     <div class="hero">
       <nav>
-        <h2 class="logo-section">
-          <img class="logo-image" src="/images/logo.svg" sizes="10px" />
+        <h2 class="logo-section2">
+          <img
+            class="logo-image2"
+            src="/Certifyup/images/logo.svg"
+            sizes="10px"
+          />
         </h2>
         <ul>
-          <li><a href="/homepage.html">Home</a></li>
-          <li><a href="/templates.html">Templates</a></li>
+          <li><a href="/Certifyup/homepage.html">Home</a></li>
+          <li><a href="/Certifyup/templates.html">Templates</a></li>
           <li><a href="#">Clubs</a></li>
-          <li><a href="#">Verify</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contec Us</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="/Certifyup/feedbackform.html">Feedback</a></li>
         </ul>
       </nav>
     </div>
-    <div class="pdf-viewer">
-      <embed id="pdf-embed" src="./php/Minimal Abstract Blue and White Certificate of Appreciation-edited.pdf">
+
+    <div class="pdf-viewer" onload="refreshPDF()">
+      <embed
+        id="pdf-embed"
+        type="application/pdf"
+        width="100%"
+        height="800px"
+      />
     </div>
-    
-    <script> 
-      const pdfEmbed = document.querySelector('#pdf-embed');
-      const pdfFile = './php/Minimal Abstract Blue and White Certificate of Appreciation-edited.pdf';
-    
-      // check if file exists
-      fetch(pdfFile)
-        .then(response => {
-          if (response.ok) {
-            pdfEmbed.src = pdfFile;
-          } else {
-            pdfEmbed.src = './php/Minimal Abstract Blue and White Certificate of Appreciation.pdf';
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching PDF file:', error);
-        });
-    </script>
-    
-    
-    
     <script>
-      function refreshPDF(newPdfUrl) {
-        var pdfEmbed = document.getElementById("pdf-embed");
-        pdfEmbed.src = newPdfUrl;
+      const params = new URLSearchParams(window.location.search);
+      const c = params.get("c");
+      function getC() {
+        return c;
       }
+      let pdfFileEdited, pdfFileDefault; // Define variables outside the switch statement
+      switch (c) {
+        case "1":
+          
+          pdfFileDefault =
+            "./php/Blue Modern Elegant Achievement Certificate.pdf";
+          break;
+        case "2":
+          
+          pdfFileDefault =
+            "./php/Blue Yellow Minimalist Internship Certificate.pdf";
+          break;
+        case "3":
+          pdfFileEdited =
+            "./php/Minimal Abstract Blue and White Certificate of Appreciation-edited.pdf";
+          pdfFileDefault =
+            "./php/Minimal Abstract Blue and White Certificate of Appreciation.pdf";
+          break;
+        case "4":
+          pdfFileEdited =
+            "./php/Orange Blue Course Badge Certificate-edited.pdf";
+          pdfFileDefault = "./php/Orange Blue Course Badge Certificate.pdf";
+          break;
+        case "5":
+          pdfFileEdited =
+            "./php/Blue and Yellow Minimalist Employee of the Month Certificate-edited.pdf";
+          pdfFileDefault =
+            "./php/Blue and Yellow Minimalist Employee of the Month Certificate.pdf";
+          break;
+        case "6":
+         
+            pdfFileDefault =
+            "./php/Blue Modern Elegant Achievement Certificate-edited.pdf";
+          break;
+        case "7":
+          
+          pdfFileDefault =
+            "./php/Blue Yellow Minimalist Internship Certificate-edited";
+          break;
+        case "8":
+         
+          pdfFileDefault =
+            "./php/Minimal Abstract Blue and White Certificate of Appreciation-edited.pdf";
+          break;
+        case "9":
+         
+          pdfFileDefault =
+            "./php/Orange Blue Course Badge Certificate-edited.pdf";
+          break;
+        case "10":
+          
+          pdfFileDefault =
+            "./php/Blue and Yellow Minimalist Employee of the Month Certificate.pdf";
+          break;
+
+        default:
+          pdfFileDefault =
+            "./php/Minimal Abstract Blue and White Certificate of Appreciation.pdf";
+          break;
+      }
+      document.querySelector("#pdf-embed").src = pdfFileDefault;
+      // fetch(pdfFileEdited)
+      //   .then((response) => {
+      //     if (response.ok) {
+      //       // Display edited file if it exists
+      //       document.querySelector("#pdf-embed").src = pdfFileEdited;
+      //     } else {
+      //       // Display non-edited file if edited file does not exist
+      //       document.querySelector("#pdf-embed").src = pdfFileDefault;
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error fetching PDF file:", error);
+      //     // Display non-edited file if an error occurs
+      //     document.querySelector("#pdf-embed").src = pdfFileDefault;
+      //   });
     </script>
-    
+
     <div>
       <form action="./php/insert-name.php" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <button type="submit" onclick="refreshPDF()">Submit</button>
+        <input type="text" id="name" name="name" required />
+        <label for="name">Data:</label>
+        <input type="text" id="data" name="data" required />
+        <label for="name">sign1:</label>
+        <input type="text" id="sign1" name="sign1" required />
+        <label for="name">sign2:</label>
+        <input type="text" id="sign2" name="sign2" required />
+        <input type="hidden" id="c" name="c" value="" />
+        <script>
+          document.getElementById("c").value = c;
+        </script>
+        <button type="submit">Submit</button>
       </form>
     </div>
   </body>
-  </html>
+</html>

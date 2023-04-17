@@ -11,7 +11,7 @@ $email = $_POST["email"];
 $suggestion = $_POST["suggestion"];
 $rating = 10;
 // Create connection
-$conn = new mysqli($servername, $usernamedb, $passworddb, $dbname);
+$conn = new mysqli($servername, $usernamedb, $passworddb, $dbname); 
 
 // Check connection
 if ($conn->connect_error) {
@@ -27,6 +27,8 @@ if ($stmt->execute()) {
     header("Location: ../homepage.html");
     
     }
+
+
 
 
 ?>

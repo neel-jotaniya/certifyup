@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .hero {
+      .hero2 {
         width: 100%;
         margin-top: -1%;
       }
 
-      .logo-image {
+      .logo-image2 {
         max-width: 40px;
         max-height: 40px;
         padding-left: 20px;
       }
-      .logo-section {
+      .logo-section2 {
         display: flex;
         justify-content: space-between;
         padding-right: 10%;
@@ -66,8 +66,10 @@
         margin-bottom: 10px;
       }
       .Certificate-name {
-        font-size: 15px;
+        font-size: 18px;
         font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        color: #ff725e;
       }
 
       .template-card:hover {
@@ -76,13 +78,13 @@
         box-shadow: 0px 0px 20px #888;
       }
 
-      .hello {
+      .hello2 {
         display: flex;
         justify-content: center;
         align-items: center;
         padding-left: 20px;
       }
-      .divider {
+      .divider2 {
         
         height: 2px;
         width: 100%;
@@ -96,65 +98,68 @@
     </style>
   </head>
   <body>
-    <div class="hero">
+    <div class="hero2">
       <nav>
-        <h2 class="logo-section">
-          <img class="logo-image" src="/images/logo.svg" sizes="10px" />
+        <h2 class="logo-section2">
+          <img class="logo-image2" src="/Certifyup/images/logo.svg" sizes="10px" />
         </h2>
         <ul>
-          <li><a href="/homepage.html">Home</a></li>
-          <li><a href="/templates.html">Templates</a></li>
+          <li><a href="/Certifyup/homepage.html">Home</a></li> 
+          <li><a href="/Certifyup/templates.html">Templates</a></li>
           <li><a href="#">Clubs</a></li>
-          <li><a href="#">Verify</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contec Us</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="/Certifyup/feedbackform.html">Feedback</a></li>
         </ul>
       </nav>
     </div>
     <main>
-      <div class="hello">
-        <div class="divider"></div>
+      <div class="hello2">
+        <div class="divider2"></div>
         <p class="Certificate-heading">Select a Template</p>
-        <div class="divider"></div>
+        <div class="divider2"></div>
       </div>
 
       <div class="certificate-templates">
         <div class="template-card">
-          <a href="create-template.html"><img
-            src="./images/Minimal Abstract Blue and White Certificate of Appreciation.png" 
+          <a href="create-template.html?c=1" class="Certificate-name"><img
+            src="./images/Blue Modern Elegant Achievement Certificate.png" 
             alt="Certificate Template 1"
           />
-          <h3 class="Certificate-name">Certificate Template 1</h3></a>
+          <h3 class="Certificate-name">Achievement Certificate</h3></a>
           
         </div>
         <div class="template-card">
-          <img
-            src="/images/Modern Elegant Certificate of Appreciation.png"
+          <a href="create-template.html?c=2" class="Certificate-name"><img
+          
+            src="./images/Blue Yellow Minimalist Internship Certificate.png"
             alt="Certificate Template 2"
-          />
-          <h3 class="Certificate-name">Certificate Template 1</h3>
+          /> 
+          <h3 class="Certificate-name">Internship Certificate</h3></a>
         </div>
         <div class="template-card">
+          <a href="create-template.html?c=3" class="Certificate-name">
+          <img
+            src="./images/Minimal Abstract Blue and White Certificate of Appreciation (1).png"
+            alt="Certificate Template 3"
+          />
+          <h3 class="Certificate-name">Certificate of Appreciation</h3></a>
+        </div>
+        <div class="template-card">
+          <a href="create-template.html?c=4" class="Certificate-name">
+          <img
+            src="./images/Orange Blue Course Badge Certificate.png"
+            alt="Certificate Template 3"
+          />
+          <h3 class="Certificate-name">Course Badge Certificate</h3></a>
+        </div>
+        <div class="template-card">
+          <a href="create-template.html?c=5" class="Certificate-name">
           <img
             src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
             alt="Certificate Template 3"
           />
-          <h3 class="Certificate-name">Certificate Template 1</h3>
-        </div>
-        <div class="template-card">
-          <img
-            src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
-            alt="Certificate Template 3"
-          />
-          <h3 class="Certificate-name">Certificate Template 1</h3>
-        </div>
-        <div class="template-card">
-          <img
-            src="images/Blue and Yellow Minimalist Employee of the Month Certificate.png"
-            alt="Certificate Template 3"
-          />
-          <h3 class="Certificate-name">Certificate Template 1</h3>
+          <h3 class="Certificate-name">Employee of the Month Certificate</h3></a>
         </div>
       </div>
     </main>
