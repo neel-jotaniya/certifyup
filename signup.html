@@ -181,7 +181,7 @@
     }
 
     if (!rePassword.test(frm.password.value)) {
-        errorMsg += "Invalid password\n";
+        errorMsg += "Invalid password(Password must between 4 to 8 character)\n\n";
     }
 
     if (errorMsg != "") {
@@ -191,18 +191,25 @@
 
     return true;
 }
+const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+
+    // If there's an error, display it
+    if (error) {
+      alert(error);
+    }
     </script>
 </head>
 <body>
 	<div class="container">
 		<form action="./php/signup.php" method="post" name="frm">
 			<h2 class="form-main-text">Sign Up</h2>
-            <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span><span class="google-text-main">Sign up with Google Account</span></div></button>
+            <!-- <button class="button" onclick="window.open('https://google.com')"><div class="google-text"><span id="g">G &nbsp;</span><span class="google-text-main">Sign up with Google Account</span></div></button>
             <div class="hello">
                 <div class="divider"></div>
                 <p>Or</p>
                 <div class="divider"></div>
-            </div>
+            </div> -->
             <div class="full-name-section">
                 <label for="name" class="form-name">Full name</label>
 			    <input type="text" id="name" name="name">
