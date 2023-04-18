@@ -31,7 +31,7 @@ $result = $stmt->get_result();
 if ($result->num_rows == 0) {
     
     
-        header("Location: ../loginform.html?error=user name is not found");
+        header("Location: ../loginform.html?error=Username is not found");
         
     exit();
 } else {

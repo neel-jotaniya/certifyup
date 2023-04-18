@@ -13,6 +13,22 @@ $sign1 = $_POST['sign1'];
 $sign2 = $_POST['sign2'];
 
 echo $c;
+if ($c==6){
+    $c = 1;
+}
+elseif ($c ==7){
+    $c = 2;
+}
+elseif ($c == 8){
+    $c = 3;
+}
+elseif ($c == 9){
+    $c == 4;
+
+}
+elseif ($c == 10){
+    $c = 5;
+}
 
 
 $mysqli = new mysqli('localhost', 'root', '', 'user-info');
@@ -101,7 +117,7 @@ $x2 = ($size['width'] - $text2Width) / 2;
 // add text2
 $pdf->SetXY($x2, $data_y);
 $pdf->Write(0, $data);
-if ($c != 2){
+if ($c != 2 || $c != 4){
 // calculate the width of the text3
 $text3Width = $pdf->GetStringWidth($sign1);
 // calculate the x-coordinate position for text3
