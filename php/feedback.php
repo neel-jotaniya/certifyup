@@ -9,7 +9,7 @@ $dbname = "user-info";
 $name = $_POST["name"];
 $email = $_POST["email"];
 $suggestion = $_POST["suggestion"];
-$rating = 10;
+$rating =  $_POST["rating"];
 // Create connection
 $conn = new mysqli($servername, $usernamedb, $passworddb, $dbname); 
 
